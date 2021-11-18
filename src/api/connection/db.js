@@ -2,10 +2,10 @@ require("sequelize")
 
 module.exports = {
     dialect: 'mysql',
-    host: process.env.CLEARDB_DATABASE_URL,
-    username: 'b8d4f404a89fc6',
-    password: '7c516d84',
-    database: process.env.CLEARDB_DATABASE,
+    host: 'us-cdbr-east-04.cleardb.com',
+    username: 'b4fd300137263e',
+    password: '460120a6',
+    database: 'heroku_2e8699256aef00b',
     define: {
         timestamps: true,
     },

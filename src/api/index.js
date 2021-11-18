@@ -36,6 +36,17 @@ app.use(routesTaskView);
 app.use(routesTaskReward);
 app.use(routesTaskResult);
 
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.json('Hello World');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
 
 app.get('/', (req, res) => {
     return res.send("Server running!")
