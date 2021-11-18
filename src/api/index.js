@@ -3,7 +3,7 @@ const path = require('path');
 const cors = require('cors');
 
 require('dotenv').config();
-const postgres = require('@metamodules/postgres')();
+//const postgres = require('@metamodules/postgres')();
 
 const app = express();
 const hostname = 'localhost';

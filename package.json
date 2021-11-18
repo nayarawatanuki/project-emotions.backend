@@ -35,7 +35,7 @@
   },
   "scripts": {
     "dev": "nodemon src/api/index.js",
-    "start": "bash bin/dev.sh",
+    "start": "react-scripts start",
     "startBack": "node src/api/index.js",
     "build": "react-scripts build",
     "deploy": "deploy-node-app",
