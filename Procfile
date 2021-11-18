@@ -1,1 +1,1 @@
-web: npm run startBack
+web: npm run start
