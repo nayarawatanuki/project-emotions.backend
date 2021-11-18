@@ -52,4 +52,4 @@ app.get('/', (req, res) => {
     return res.send("Server running!")
 })
 
-app.listen(port);
+app.listen(process.env.PORT || 3000);
