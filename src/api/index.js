@@ -6,7 +6,7 @@ require('dotenv').config();
 //const postgres = require('@metamodules/postgres')();
 
 const app = express();
-const hostname = process.env.PUBLIC_URL;
+const hostname = process.env.APP_URL;
 const port = process.env.PORT;
 require('./db');
 
