@@ -6,8 +6,8 @@ require('dotenv').config();
 //const postgres = require('@metamodules/postgres')();
 
 const app = express();
-const hostname = process.env.APP_URL;
-const port = process.env.PORT;
+const hostname = process.env.CLEARDB_DATABASE_URL;
+const port = '3306';
 require('./db');
 
 const routesAdmin = require('./routes/Admins');
