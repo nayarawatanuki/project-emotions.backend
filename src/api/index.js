@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const app = express();
 const hostname = process.env.CLEARDB_DATABASE_URL;
-const port = '3306';
+const port = process.env.PORT;
 require('./db');
 
 const routesAdmin = require('./routes/Admins');
@@ -52,4 +52,4 @@ app.get('/', (req, res) => {
     return res.send("Server running!")
 })
 
-app.listen(port);
+app.listen(process.env.PORT || 3306);
