@@ -1,8 +1,8 @@
-const sequelize = require("sequelize")
+require("sequelize")
 
 module.exports = {
     dialect: 'mysql',
-    host: 'localhost',
+    host: '34.151.232.43',
     username: 'root',
     password: '7797',
     database: 'emotions',
