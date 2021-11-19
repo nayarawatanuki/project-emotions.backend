@@ -36,9 +36,7 @@ app.use(routesTaskView);
 app.use(routesTaskReward);
 app.use(routesTaskResult);
 
-app.listen(port, url, () => {
-  console.log(`Server running at http://${url}:${port}/`);
-});
+console.log(`Server running at http://${url}:${port}/`);
 
 app.get('/', (req, res) => {
     return res.send("Server running!");
