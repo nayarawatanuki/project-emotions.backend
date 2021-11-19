@@ -3,7 +3,6 @@ const path = require('path');
 const cors = require('cors');
 
 require('dotenv').config();
-//const postgres = require('@metamodules/postgres')();
 
 const app = express();
 const url = process.env.APP_URL;
