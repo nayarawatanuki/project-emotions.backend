@@ -6,7 +6,7 @@ require('dotenv').config();
 //const postgres = require('@metamodules/postgres')();
 
 const app = express();
-const hostname = process.env.CLEARDB_DATABASE_URL;
+const hostname = process.env.APP_URL;
 const port = process.env.PORT;
 require('./db');
 
@@ -36,10 +36,20 @@ app.use(routesTaskView);
 app.use(routesTaskReward);
 app.use(routesTaskResult);
 
+const http = require('http');
 
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.json('Hello World');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
 
 app.get('/', (req, res) => {
-    return res.send("Server running!")
-})
+    return res.send("Server running!");
+});
 
-app.listen(process.env.PORT || 3306);
+app.listen(port || 3000);
